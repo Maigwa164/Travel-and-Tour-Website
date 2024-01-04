@@ -1,0 +1,57 @@
+//for sticky navbar
+window.addEventListener("scroll",function(){
+    var header = this.document.querySelector("header");
+    header.classList.toggle('sticky',this.window.scrollY > 0);
+});
+//for logo
+window.addEventListener("scroll", function () {
+    var header = document.querySelector(".logo");
+    header.classList.toggle('sticky', window.scrollY > 0);
+
+    // Adjust logo size based on scroll position
+    var maxLogoHeight = 50; // Max height for the logo
+    var scrollPercentage = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+    var newLogoHeight = maxLogoHeight - (maxLogoHeight * scrollPercentage);
+
+    // Ensure the new height is not less than 0
+    newLogoHeight = Math.max(newLogoHeight, 0);
+
+    logo.style.maxHeight = newLogoHeight + "px";
+});
+
+//for reactive navbar
+var menu = document.querySelector('.menu');
+var menuBtn = document.querySelector('.menu-btn');
+var closeBtn = document.querySelector('.close-btn');
+
+menuBtn.addEventListener("click",()=>{
+    menu.classList.add('active');
+}); 
+closeBtn.addEventListener("click",()=>{
+    menu.classList.remove('active');
+});
+ 
+//drop down
+function toggleDropdown() {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.classList.toggle('show');
+}
+
+function closeDropdown() {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.classList.remove('show');
+}
+
+// Close dropdown when clicking outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+

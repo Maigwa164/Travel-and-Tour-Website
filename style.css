@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+:root {
+    --primary-color: #669ccb;
+    --primary-color-dark: #5681a7;
+    --secondary-color: #e8f1fa;
+    --text-dark: #282d31;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+  
+    --max-width: 1200px;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+}
+body{
+    min-height: 100vh;
+
+}
+.logo{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 30px;
+    top:20px;
+    display:block;
+    transition: max-height 0.3s; /* Add a smooth transition effect for logo size changes */
+}
+.logo.sticky {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    height: 60px;
+    width: 60px;
+    transform: translateX(-50%);
+    padding: 10px; /* Add padding to the sticky logo (adjust as needed) */
+}
+.section-main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background:url('./images/leopard.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+}
+.section-main h1{
+    color:#F94C10;
+    font-size: 60px;
+    font-weight: 800px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
+}
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    transition: 0.6s;
+}
+header.sticky{
+    background:snow;
+    padding: 15px 100px;
+}
+header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header .menu a{
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 0 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: color, background;
+}
+header .menu a:hover{
+    color: #F94C10;
+    background: #fff;
+}
+header .btn{
+    color:black;
+    font-size: 25px;
+    cursor: pointer;
+    display:none;
+}
+/* drop down*/
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropbtn {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display:inline-block;
+}
+
+
+/* Section Two styles */
+.section-two {
+    background-color: #EEE2DE;
+    padding: 40px;
+    text-align: center;
+}
+/*small title */
+.section-title {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+    margin-top: 20px; /* Increase the margin for more space */
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+
+.section-two h2 {
+    font-size: 2em;
+}
+
+.about-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px; /* Add margin to separate from the small title */
+}
+
+.image-container {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom: 20px; /* Add margin between image and description */
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.description-container {
+    flex: 1;
+    text-align: left;
+    margin-bottom: 20px; /* Add margin between image and description */
+    margin-top: 50px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .description-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+/*end of section two*/
+
+/*banner one content*/
+.banner__container {
+    background-image:  linear-gradient(
+        rgba(35, 71, 103, 0.5),
+        rgba(35, 71, 103, 0.5)
+      ),url("./images/baby-lions.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .banner__container .section__container {
+    padding: 10rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .banner__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    color: var(--extra-light);
+  }
+  
+  .banner__content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  
+  .banner__content button {
+    padding: 0.5rem 2rem;
+    outline: none;
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+
+/*end of banner one content*/
+
+/*banner two*/
+
+/* Margin to create white space between banners */
+.banner__container {
+    margin-bottom: 50px; /* Adjust as needed for the desired white space */
+}
+
+.banner__container.banner-two {
+    background-color: #f8f8f8; /* Customize the background color */
+    color: #333; /* Customize the text color */
+    padding: 50px 0; /* Add padding as needed */
+}
+
+.banner-two h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.banner-two p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.banner-two button {
+    background-color: #3498db; /* Customize the button background color */
+    color: #fff; /* Customize the button text color */
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner-two button:hover {
+    background-color: #2980b9; /* Customize the button background color on hover */
+}
+
+
+
+/*end of banner two*/
+
+/*footer*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__left {
+    display: flex;
+    align-items: center;
+}
+
+.footer__logo {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.footer__right {
+    text-align: center; /* Center the content on smaller screens */
+    margin-top: 20px; /* Add some space between sections */
+}
+
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    flex: 1; /* Take up all available space */
+}
+
+.subscribe-form button {
+    flex: 1; /* Take up all available space */
+}
+
+.copyright {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+
+/*end of footer*/
+
+
+@media(max-width:1060px){
+    header .btn{
+        display: block;
+    }
+
+    header .menu{
+        position: fixed;
+        background:bisque;
+        flex-direction: column;
+        min-width: 400px;
+        height: 100vhs;
+        top:0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0,5s;
+        transition-property: right;
+
+    }
+    header .menu.active{
+        right: 0;
+    }
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+
+
+    }
+    header .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding:  0 15px;
+
+    }
+}
+@media(max-width:630px){
+    .section-main h1{
+        font-size: 50px;
+        line-height: 60px;
+
+    }
+    }
