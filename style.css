@@ -18,6 +18,7 @@
 }
 body{
     min-height: 100vh;
+    overflow-x: hidden;
 
 }
 .logo{
@@ -38,7 +39,7 @@ body{
     transform: translateX(-50%);
     padding: 10px; /* Add padding to the sticky logo (adjust as needed) */
 }
-.section-main{
+/*.section-main{
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -49,7 +50,28 @@ body{
     justify-content: center;
     align-items: center;
     padding: 20px 100px;
+}*/
+.mySlides{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+
 }
+
+/* Add media query for smaller screens (adjust max-width as needed) */
+@media only screen and (max-width: 600px) {
+    .mySlides {
+        min-height: 50vh; /* Adjust the minimum height for smaller screens */
+    }
+}
+
 .section-main h1{
     color:#F94C10;
     font-size: 60px;
@@ -106,6 +128,7 @@ header .btn{
 
 .dropdown {
     display: inline-block;
+    
 }
 
 .dropbtn {
@@ -113,16 +136,18 @@ header .btn{
     text-decoration: none;
     padding: 14px 16px;
     display: block;
+    
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #EAECCC;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    margin-top: 10px;
+    margin-top: 10px;  
+    
 }
 
 .dropdown-content a {
@@ -131,6 +156,7 @@ header .btn{
     text-decoration: none;
     display: block;
     margin-bottom: 8px;
+    
 }
 
 .dropdown-content a:hover {
@@ -364,7 +390,7 @@ header .btn{
 
     header .menu{
         position: fixed;
-        background:bisque;
+        background:#739072;
         flex-direction: column;
         min-width: 400px;
         height: 100vhs;
@@ -401,3 +427,5 @@ header .btn{
 
     }
     }
+
+    
