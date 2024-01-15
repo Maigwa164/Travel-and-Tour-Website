@@ -54,17 +54,14 @@ body{
 .mySlides{
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
+    min-height: fit-content;
     background:no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 0px;
-    height: fit-content;padding-bottom: 300px;
-   
-
 }
 
 /* Add media query for smaller screens (adjust max-width as needed) */
