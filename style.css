@@ -55,13 +55,15 @@ body{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: no-repeat;
+    background:no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px 0px;
+    height: fit-content;padding-bottom: 300px;
+   
 
 }
 
@@ -173,6 +175,7 @@ header .btn{
     background-color: #EEE2DE;
     padding: 40px;
     text-align: center;
+
 }
 /*small title */
 .section-title {
