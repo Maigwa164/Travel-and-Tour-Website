@@ -371,16 +371,25 @@ header .btn{
 }
 
 .subscribe-form button {
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
-    flex: 1; /* Take up all available space */
+    
 }
 
 .copyright {
     font-size: 0.8em;
     margin: 0;
+    color: #739072;
+    font-size: medium;
 }
-
+.Urchin{
+    font-size:medium;
+    color:#EAECCC;
+    text-decoration-line: none;
+}
+a{
+    text-decoration: none;
+}
 
 /*end of footer*/
 
