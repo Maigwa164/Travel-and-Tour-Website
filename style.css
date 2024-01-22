@@ -34,8 +34,8 @@ body{
     position: fixed;
     top: 0;
     left: 10%;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     transform: translateX(-50%);
     padding: 10px; /* Add padding to the sticky logo (adjust as needed) */
 }
@@ -368,11 +368,15 @@ header .btn{
     padding: 10px;
     margin-bottom: 10px;
     flex: 1; /* Take up all available space */
+    max-width: 250px;
+ 
 }
 
 .subscribe-form button {
     padding: 5px;
     margin-bottom: 10px;
+    background-color:#F94C10;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     
 }
 
@@ -438,5 +442,35 @@ a{
 
     }
     }
+/*end of main page*/
 
+
+    /*gallery page style*/
     
+.gallery .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .gallery .box-container .box{
+    height: 25rem;
+    flex: 1 1 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .gallery .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .gallery .box-container .box:hover img{
+    transform: scale(1.1);
+  }
+  
+
+
+    /*End of gallery style*/
