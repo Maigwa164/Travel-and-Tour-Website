@@ -473,7 +473,7 @@ a{
       }
       
       html::-webkit-scrollbar-thumb{
-        background: var(--primary-color);
+        background:#304D30;
         border-radius: 5rem;
       }
       
@@ -491,13 +491,13 @@ a{
       }
       
       .heading span{
-        color: var(--color);
+        color: #4F6F52;
         text-transform: uppercase;
       }
       
       /*image part*/
-      
       .gallery .box-container {
+        
           display: flex;
           flex-wrap: wrap;
           gap: 1.5rem;

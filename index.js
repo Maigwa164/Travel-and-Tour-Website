@@ -70,3 +70,24 @@ function carousel() {
   x[slideIndex-1].style.display = "flex";
   setTimeout(carousel, 5000); // Change image every 2 seconds
 }
+
+//for gallery slide
+
+var swiper = new Swiper(".gallery-slider", {
+    grabCursor:true,
+    loop:true,
+    centeredSlides:true,
+    spaceBetween:20,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0:{
+            slidesPerView:1,
+        },
+        700:{
+            slidesPerView:2,
+        },
+    }
+})
