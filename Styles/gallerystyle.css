@@ -1,0 +1,128 @@
+
+    /*gallery page style*/
+    
+    
+    *{
+        font-family: 'Roboto', sans-serif;
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        outline: none; border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+      }
+      
+      html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 4rem;
+      }
+      
+      html::-webkit-scrollbar{
+        width: 1rem;
+      }
+      
+      html::-webkit-scrollbar-track{
+        background: transparent;
+      }
+      
+      html::-webkit-scrollbar-thumb{
+        background:#304D30;
+        border-radius: 5rem;
+      }
+      
+      section{
+        padding: 2rem 7%;
+      }
+      
+      .heading{
+        text-align: center;
+        color:#294B29;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        padding: 1.2rem 0;
+        font-size: 4rem;
+      }
+      
+      .heading span{
+        color: #4F6F52;
+        text-transform: uppercase;
+      }
+      
+      /*image part*/
+      .gallery .box-container {
+        
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+        }
+        
+        .gallery .box-container .box {
+          position: relative; /* Added for positioning the overlay */
+          height: 25rem;
+          flex: 1 1 30rem;
+          box-shadow: var(--box-shadow);
+          border-radius: 1rem;
+          overflow: hidden;
+        }
+        
+        .gallery .box-container .box img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        
+        .gallery .box-container .box:hover img {
+          transform: scale(1.1);
+        }
+        
+        /* Add styling for the caption */
+        .gallery .box-container .box .caption {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          text-align: center;
+          padding: 10px;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+        }
+        
+        .gallery .box-container .box:hover .caption {
+          opacity: 1;
+        }
+        
+      
+      /* end */
+
+      
+      /*sliding gallery*/
+      
+.gallery{
+  background: var(--bg);
+}
+
+.gallery .slide .image{
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .slide .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+  color: var(--white);
+}
+
+
+      /*end of sliding gallery*/
+
+    /*End of gallery style*/

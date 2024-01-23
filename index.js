@@ -15,7 +15,7 @@ window.addEventListener("scroll", function () {
 
     // Ensure the new height is not less than 0
     newLogoHeight = Math.max(newLogoHeight, 0);
-
+    
     logo.style.maxHeight = newLogoHeight + "px";
 });
 

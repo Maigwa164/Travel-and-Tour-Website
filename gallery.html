@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>African Rhythms Safaris gallery</title>
-    <link rel="stylesheet" href="gallerystyle.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Styles/gallerystyle.css">
+    <link rel="stylesheet" href="./Styles/style.css">
     <link rel="javascript" href="index.js">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
@@ -50,6 +51,52 @@
         <h2 style="color: orange;">African Rhythms Safaris</h2>
         
     </section>
+
+    <!--Sliding Gallery-->
+
+    <section class="gallery" id="gallery">
+
+        <h2 class="heading">gallery</h2>
+
+        <div class="swiper gallery-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="/images/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="/images/gallery-2.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="/images/gallery-3.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="/images/gallery-4.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+
+    <!--End of sliding-->
 
    
 
@@ -155,7 +202,7 @@
 </footer>
 
 <!--End of footer-->
-
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

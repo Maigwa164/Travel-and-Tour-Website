@@ -1,0 +1,129 @@
+
+    /*About us style*/
+    
+    
+    *{
+        font-family: 'Roboto', sans-serif;
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        outline: none; border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .2s linear;
+      }
+      
+      html{
+        font-size: 62.5%;
+       
+      }
+      
+      html::-webkit-scrollbar{
+        width: 1rem;
+      }
+      
+      html::-webkit-scrollbar-track{
+        background: transparent;
+      }
+      
+      html::-webkit-scrollbar-thumb{
+        background:#304D30;
+        border-radius: 5rem;
+      }
+      
+      section{
+        padding: 2rem 7%;
+      }
+      
+      .heading{
+        text-align: center;
+        color:#294B29;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        padding: 1.2rem 0;
+        font-size: 4rem;
+      }
+      
+      .heading span{
+        color: #4F6F52;
+        text-transform: uppercase;
+      }
+
+    
+/* about us */
+
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+    align-items: center;
+  }
+  
+  .about .row .image{
+    flex: 1 1 30rem;
+  }
+  
+  .about .row .image img{
+    width: 100%;
+  }
+  
+  .about .row .content{
+    flex: 1 1 50rem;
+  }
+  .about .row .content h3{
+    font-size: 3.5rem;
+    color: var(--color);
+    padding: 2rem 0;
+  }
+  
+  .about .row .content p{
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem 0;
+    line-height: 1.8;
+  }
+  
+  /* end */
+
+    /* banner */
+
+    .banner{
+        background: url(/images/banner.png) no-repeat;
+      }
+      
+      .banner .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6rem;
+      }
+      
+      .banner .row .content{
+        flex:  1 1 39rem;
+      }
+      
+      .banner .row .content h3{
+        font-size: 2rem;
+        color: var(--main);
+        text-transform: uppercase;
+      }
+      
+      .banner .row .content p{
+        font-size: 1.6rem;
+        color: var(--black);
+        padding: 1rem 0;
+        line-height: 1.8;
+      }
+      
+      .banner .row .image{
+        flex: 1 1 41rem;
+        margin-bottom: -14rem;
+      }
+      
+      .banner .row .image img{
+        width: 100%;
+      }
+
+     
+      
+      /* end */
