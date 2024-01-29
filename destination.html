@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>African Rhythms Safaris gallery</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/destination.css">
     <link rel="javascript" href="index.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="/images/favicon.ico">
 </head>
 <body>
     <header>
@@ -22,13 +24,12 @@
             <a href="contact us.html">CONTACT US</a>
             
             <div class="dropdown">
-                <a href="#" class="dropbtn">DESTINATIONS<i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-content">
+                <a href="destination.html" class="dropbtn">DESTINATIONS<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content" style="width: 200px;"> <!-- Added style attribute to set the width -->
                     <a href="Naivasha.html">NAIVASHA</a>
                     <a href="Samburu.html">SAMBURU</a>
                     <a href="Mombasa.html">MOMBASA</a>
                     <a href="Maasai Mara.html">MAASAI MARA</a>
-
                 </div>
             </div>
             <a href="Booking.html">BOOKING</a>
@@ -42,7 +43,97 @@
     <img class="mySlides" src="./images/leopard.jpg">
     <img class="mySlides" src="./images/beach1.jpg">
     <img class="mySlides" src="./images/beach2.jpg">
+    <img class="mySlides" src="./images/naivasha4.jpg">
+    <img class="mySlides" src="./images/naivasha1.jpg">
+    <img class="mySlides" src="./images/naivasha2.jpg">
+    <img class="mySlides" src="./images/naivasha3.jpg">
+    <img class="mySlides" src="./images/leopard-resting-tree.jpg">
+
     
+
+    <!-- menu section starts -->
+
+    <section class="menu" id="menu">
+
+        <h1 class="heading"><span>our </span> destinations</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/lion roaring.jpg" alt="">
+                <div class="content">
+                    <h3>Naivasha</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem, nihil.</p>
+                    <a href="Naivasha.html" class="button">More Information</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/naivasha2.jpg" alt="">
+                <div class="content">
+                    <h3>Samburu</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem, nihil.</p>
+                    <a href="Samburu.html" class="button">More Information</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/naivasha1.jpg" alt="">
+                <div class="content">
+                    <h3>Mombasa</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem, nihil.</p>
+                    <a href="Mombasa.html" class="button">More Information</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/naivasha3.jpg" alt="">
+                <div class="content">
+                    <h3>Maasai Mara</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa quidem, nihil.</p>
+                    <a href="Maasai Mara.html" class="button">More Information</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--Footer-->
+<footer class="footer">
+    <div class="footer__container">
+        <!-- Left side with logo and social icons -->
+        <div class="footer__left">
+            <img class="footer__logo" src="./images/logo.png" alt="Footer Logo">
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/254757470356?text=Hello,%20I%20have%20an%20inquiry%20about%20your%20service." class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <!-- Add more social icons as needed -->
+            </div>
+        </div>
+
+        <!-- Right side with subscription form and copyright -->
+        <div class="footer__right">
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="copyright">
+                &copy; copyright 2024 African Rhythms. All rights reserved. 
+                | <a href="https://github.com/Tec-Urchin" target="_blank"><span class="Urchin">Tec Urchin</span></a>
+            </p>
+                
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!--End of footer-->
+
+    <!-- menu section ends -->
     <script src="index.js"></script>
 </body>
-</html>t
+</html>
