@@ -187,7 +187,6 @@ header .menu a.current-page {
 .section-title {
     font-size: 1.2em;
     color: #555;
-    margin-top: 10px;
     margin-top: 20px; /* Increase the margin for more space */
     margin-bottom: 10px; /* Adjust as needed */
 }
@@ -202,6 +201,7 @@ header .menu a.current-page {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px; /* Add margin to separate from the small title */
+    max-height: min-content;
 }
 
 .image-container {
@@ -242,7 +242,7 @@ header .menu a.current-page {
     background-image:  linear-gradient(
         rgba(35, 71, 103, 0.5),
         rgba(35, 71, 103, 0.5)
-      ),url("/images/baby-lions.jpg");
+      ),url("/images/naivasha2.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -263,7 +263,10 @@ header .menu a.current-page {
     color: var(--extra-light);
   }
   
-  .banner__content h2 {
+  .banner__content h1 {
+    
+    font-family: 'Roboto', sans-serif;
+    color: #F9EFDB;
     font-size: 2rem;
     font-weight: 400;
   }
@@ -278,34 +281,7 @@ header .menu a.current-page {
     cursor: pointer;
   }
   
-
-/*end of banner one content*/
-
-/*banner two*/
-
-/* Margin to create white space between banners */
-.banner__container {
-    margin-bottom: 50px; /* Adjust as needed for the desired white space */
-}
-
-.banner__container.banner-two {
-    background-color: #f8f8f8; /* Customize the background color */
-    color: #333; /* Customize the text color */
-    padding: 50px 0; /* Add padding as needed */
-}
-
-.banner-two h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.banner-two p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.banner-two button {
+.banner__content button {
     background-color: #3498db; /* Customize the button background color */
     color: #fff; /* Customize the button text color */
     padding: 10px 20px;
@@ -315,13 +291,59 @@ header .menu a.current-page {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-.banner-two button:hover {
-    background-color: #2980b9; /* Customize the button background color on hover */
+.banner__content button a{
+    text-decoration: none;
+    color:whitesmoke;
 }
 
+.banner__content button:hover {
+    background-color: #2980b9; /* Customize the button background color on hover */
+}
+  
+
+/*end of banner one content*/
+
+/*banner two*/
 
 
+/* Margin to create white space between banners */
+.banner__container {
+    margin-bottom: 50px; /* Adjust as needed for the desired white space */
+}
+
+.banner__container2 {
+    background-image:  linear-gradient(
+        rgba(35, 71, 103, 0.5),
+        rgba(35, 71, 103, 0.5)
+      ),url("/images/elephants-standing-near-lake.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .banner__container2 .section__container2 {
+    padding: 10rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .banner__content2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    color: var(--extra-light);
+  }
+
+  .banner__content2 h1 {
+    
+    font-family: 'Roboto', sans-serif;
+    color: #F9EFDB;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .banner__container2 {
+    margin-bottom: 50px; /* Adjust as needed for the desired white space */
+}
 /*end of banner two*/
 
 /*footer*/
