@@ -167,6 +167,13 @@ header .btn{
 .dropdown:hover .dropdown-content {
     display:block;
 }
+/*highlight the current page*/
+header .menu a.current-page {
+    color: #F94C10;
+    background: #fff;
+}
+
+
 
 
 /* Section Two styles */

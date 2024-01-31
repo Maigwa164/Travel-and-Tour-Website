@@ -1,8 +1,17 @@
-//for sticky navbar
-window.addEventListener("scroll",function(){
-    var header = this.document.querySelector("header");
-    header.classList.toggle('sticky',this.window.scrollY > 0);
+//for sticky navbar and highlighting current page
+window.addEventListener("scroll", function() {
+    var header = document.querySelector("header");
+    var currentPage = window.location.href;
+    
+    header.classList.toggle('sticky', window.scrollY > 0);
+
+    var navLinks = document.querySelectorAll('.menu a');
+
+    navLinks.forEach(function(navLink) {
+        navLink.classList.toggle('current-page', navLink.href === currentPage);
+    });
 });
+
 //for logo
 window.addEventListener("scroll", function () {
     var header = document.querySelector(".logo");
@@ -79,3 +88,4 @@ var swiper = new Swiper(".gallery-slider", {
         },
     }
 })
+
