@@ -1,16 +1,33 @@
-//for sticky navbar and highlighting current page
-window.addEventListener("scroll", function() {
+// For sticky navbar and highlighting current page
+window.addEventListener("DOMContentLoaded", function() {
     var header = document.querySelector("header");
     var currentPage = window.location.href;
-    
-    header.classList.toggle('sticky', window.scrollY > 0);
 
-    var navLinks = document.querySelectorAll('.menu a');
+    // Function to add 'sticky' class to the header
+    function toggleSticky() {
+        header.classList.toggle('sticky', window.scrollY > 0);
+    }
 
-    navLinks.forEach(function(navLink) {
-        navLink.classList.toggle('current-page', navLink.href === currentPage);
+    // Function to highlight the current page in the navigation
+    function highlightCurrentPage() {
+        var navLinks = document.querySelectorAll('.menu a');
+
+        navLinks.forEach(function(navLink) {
+            navLink.classList.toggle('current-page', navLink.href === currentPage);
+        });
+    }
+
+    // Initial call to set initial state
+    toggleSticky();
+    highlightCurrentPage();
+
+    // Event listener for scroll
+    window.addEventListener("scroll", function() {
+        toggleSticky();
+        highlightCurrentPage();
     });
 });
+
 
 //for logo
 window.addEventListener("scroll", function () {
