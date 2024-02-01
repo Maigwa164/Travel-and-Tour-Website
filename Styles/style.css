@@ -194,6 +194,7 @@ header .menu a.current-page {
 
 .section-two h2 {
     font-size: 2em;
+   
 }
 
 .about-us-container {
@@ -334,13 +335,24 @@ header .menu a.current-page {
     color: var(--extra-light);
   }
 
-  .banner__content2 h1 {
+  .banner__content2 h2 {
     
     font-family: 'Roboto', sans-serif;
     color: #F9EFDB;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 400;
   }
+
+hr{
+    width: 70%;
+    height: 1px;
+}
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+    hr {
+        width: 100%; /* Set width to 100% of the viewport width for better responsiveness */
+    }
+}
   .banner__container2 {
     margin-bottom: 50px; /* Adjust as needed for the desired white space */
 }
