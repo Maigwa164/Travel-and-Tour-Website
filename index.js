@@ -28,7 +28,6 @@ window.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 //for logo
 window.addEventListener("scroll", function () {
     var header = document.querySelector(".logo");
@@ -105,4 +104,3 @@ var swiper = new Swiper(".gallery-slider", {
         },
     }
 })
-

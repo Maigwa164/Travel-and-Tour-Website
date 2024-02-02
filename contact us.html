@@ -9,6 +9,10 @@
     <link rel="javascript" href="index.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="/images/favicon.ico">
+
+    
+<!--for email form-->
+
 </head>
 <body>
     <header>
@@ -83,28 +87,27 @@
     <!-- Email -->
 
     <section class="contact" id="contact">
-
-        <h2 class="heading">Get Intouch</h2>
-
-        <form action="">
-
+        <h2 class="heading">Get In Touch</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+            <input type="hidden" name="access_key" value="a42052ee-4cca-4499-a2cf-c81787c7d699">
+    
             <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="email" id="email" name="email" placeholder="Email">
             </div>
-
+    
             <div class="inputBox">
-                <input type="number" placeholder="number">
-                <input type="text" placeholder="subject">
+                <input type="tel" id="number" name="number" placeholder="Number">
+                <input type="text" id="subject" name="subject" placeholder="Subject">
             </div>
-
-            <textarea name="" id="" cols="30" rows="10" placeholder="meassage"></textarea>
-
-            <a href="#" class="btn">send message</a>
-
+    
+            <textarea id="message" name="message" cols="30" rows="10" placeholder="Message"></textarea>
+    
+            <button type="submit" class="btn">Send Message</button>
+    
         </form>
-
     </section>
+    
 
     
 <!--Footer-->
@@ -139,7 +142,6 @@
 </footer>
 
 <!--End of footer-->
-    
     <script src="index.js"></script>
 </body>
 </html>
