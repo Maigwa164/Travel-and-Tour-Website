@@ -1,11 +1,11 @@
-    
+/*    
 :root{
     --main: #ff6e01;
     --bg: #f1e1d2;
     --black: #000;
     --white: #fff;
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
-  }
+  }*/
       
       *{
           font-family: 'Roboto', sans-serif;
@@ -52,10 +52,10 @@
           color: #4F6F52;
           text-transform: uppercase;
         }
-        .btn{
+        .button{
             font-size: 1.7rem;
             display: inline-block;
-            background: var(--main);
+            background: #ff6e01;
             color: var(--white);
             box-shadow: var(--box-shadow);
             border-radius: 5rem;
@@ -66,7 +66,7 @@
             overflow: hidden;
           }
           
-          .btn::before{
+          .button::before{
             content: '';
             position: absolute;
             top: 0;
@@ -78,7 +78,7 @@
             left: 0;
           }
           
-          .btn:hover::before{
+          .button:hover::before{
             width: 100%;
           }
 
@@ -126,7 +126,7 @@
   /* email form */
   
   .contact{
-    background: var(--bg);
+    background: #f1e1d2;
   }
   
   .contact form{
