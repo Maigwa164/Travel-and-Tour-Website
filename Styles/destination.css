@@ -11,7 +11,7 @@
       box-sizing: border-box;
       outline: none; border: none;
       text-decoration: none;
-      text-transform: capitalize;
+      /*text-transform: capitalize;*/
       transition: .2s linear;
     }
     
@@ -167,7 +167,7 @@
   flex: 1 1 50rem;
 }
 .about .row .content h3{
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: var(--color);
   padding: 2rem 0;
 }
@@ -199,14 +199,14 @@
 .review .content h3{
   font-size: 3rem;
   padding-top: .5rem;
-  color:#ff9748;
+  color: var(--color);
 }
 
 .review .content p{
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--black);
   padding: 1rem 0;
-  line-height: 2;
+  line-height: 1.8;
 }
 
 .review .box-container{
