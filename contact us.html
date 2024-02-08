@@ -97,27 +97,30 @@
 
     <!-- Email -->
 
-    <section class="contact" id="contact">
-        <h2 class="heading">Get In Touch</h2>
-        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
-            <input type="hidden" name="access_key" value="a42052ee-4cca-4499-a2cf-c81787c7d699">
-    
-            <div class="inputBox">
-                <input type="text" id="name" name="name" placeholder="Name">
-                <input type="email" id="email" name="email" placeholder="Email">
-            </div>
-    
-            <div class="inputBox">
-                <input type="tel" id="number" name="number" placeholder="Number">
-                <input type="text" id="subject" name="subject" placeholder="Subject">
-            </div>
-    
-            <textarea id="message" name="message" cols="30" rows="10" placeholder="Message"></textarea>
-    
-            <button type="submit" class="button">Send Message</button>
-    
-        </form>
-    </section>
+    <!-- Email -->
+
+<section class="contact" id="contact">
+    <h2 class="heading">Get In Touch</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+        <input type="hidden" name="access_key" value="a42052ee-4cca-4499-a2cf-c81787c7d699">
+
+        <div class="inputBox">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="inputBox">
+            <input type="tel" id="number" name="number" placeholder="Number" required>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+
+        <textarea id="message" name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+
+        <button type="submit" class="button">Send Message</button>
+
+    </form>
+</section>
+
     
 
     
