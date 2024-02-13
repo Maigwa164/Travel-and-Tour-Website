@@ -319,7 +319,7 @@ header .menu a.current-page {
       ),url("/images/elephants-standing-near-lake.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
   }
   .banner__container2 .section__container2 {
     padding: 10rem 1rem;
