@@ -485,6 +485,13 @@ a{
 
     }
     }
+/* Fix for small screens like 360 x 720 */
+@media(max-width: 400px){
+    header .menu{
+        min-width: 100%; /* Set menu width to full viewport width */
+    }
+}
+
 /*end of main page*/
 
 
