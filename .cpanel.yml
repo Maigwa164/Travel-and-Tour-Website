@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/D/GitRepo/Travel and Tour/
+    - /Travel and Tour/cp index.html $DEPLOYPATH
+    - /Travel and Tour/Styles style.css $DEPLOYPATH
