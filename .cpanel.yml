@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/africarh/repositories/Travel-and-Tour-Website
-    - /repositories/Travel-and-Tour-Website index.html $DEPLOYPATH
-    - /bin/cp Styles.css $DEPLOYPATH
