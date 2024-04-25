@@ -347,6 +347,17 @@ hr{
     width: 70%;
     height: 1px;
 }
+
+.banner__content2 a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.banner__content2 a:hover{
+    color: #F94C10;
+}
+
+
 /* Media query for small screens */
 @media screen and (max-width: 600px) {
     hr {
