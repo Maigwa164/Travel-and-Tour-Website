@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>African Rhythms Safaris</title>
+    <title>Africa Rhythms Safaris</title>
     <link rel="stylesheet" href="./Styles/style.css">
     <link rel="stylesheet" href="/Styles/contact.css">
     <link rel="javascript" href="index.js">
@@ -134,7 +134,7 @@
         <div class="footer__left">
             <img class="footer__logo" src="./images/logo.png" alt="Footer Logo">
             <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://web.facebook.com/africarhythmsafaris" class="social-icon"><i class="fab fa-facebook"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/254731370112?text=Hello,%20I%20have%20an%20inquiry%20about%20your%20service." class="social-icon"><i class="fab fa-whatsapp"></i></a>
@@ -145,12 +145,15 @@
 
         <!-- Right side with subscription form and copyright -->
         <div class="footer__right">
-            <form class="subscribe-form">
-                <input type="email" placeholder="Enter your email">
+            <form name="submit-to-google-sheet" class="subscribe-form">
+                <input type="email" name="Email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
             </form>
+            <!--Subscription-->
+            <span id="msg"></span>
+            
             <p class="copyright">
-                &copy; copyright 2024 African Rhythms Safaris. All rights reserved. 
+                &copy; copyright 2024 Africa Rhythms Safaris. All rights reserved. 
                 | <a href="https://github.com/Tec-Urchin" target="_blank"><span class="Urchin">Tec Urchin</span></a>
             </p>
                 
@@ -160,6 +163,25 @@
 </footer>
 
 <!--End of footer-->
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzqt2yR6IUogAke_AqcHpjmV3Z1ba1sInm4_qirT3L29pE7asQfc_e5m_YbomrFAz0MpQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Thank You For Subscribing!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
     
     <script src="index.js"></script>
 </body>

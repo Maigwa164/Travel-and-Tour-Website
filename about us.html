@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>African Rhythms Safaris gallery</title>
+    <title>Africa Rhythms Safaris gallery</title>
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="Styles/aboutstyle.css">
     <link rel="javascript" href="index.js">
@@ -64,10 +64,10 @@
                 <img src="/images/giraffe.jpg" alt="">
             </div>
             <div class="content">
-                <h3>Welcome To African Rythm Safaris</h3>
-                <p>At African Rhythm Safari, transparency and trust are paramount. Meet our team of passionate adventurers and certified tour operators who bring expertise and authenticity to every journey. 
+                <h3>Welcome To Africa Rythm Safaris</h3>
+                <p>At Africa Rhythm Safari, transparency and trust are paramount. Meet our team of passionate adventurers and certified tour operators who bring expertise and authenticity to every journey. 
                     From our seasoned guides to our dedicated support staff, each member is committed to ensuring your safari experience exceeds expectations.</p>
-                <p>African Rhythm Safari offers unparalleled safari adventures that immerse you in the heart of Africa's breathtaking landscapes and vibrant cultures. With a focus on authenticity and sustainability, 
+                <p>Africa Rhythm Safari offers unparalleled safari adventures that immerse you in the heart of Africa's breathtaking landscapes and vibrant cultures. With a focus on authenticity and sustainability, 
                     our tours provide unique opportunities to explore wildlife-rich reserves, engage with local communities, and create lasting memories.</p>
 
             </div>
@@ -86,9 +86,9 @@
             <div class="content">
                 <h3>Our Commitment</h3>
             <p>Founded with a deep love for Africa and a vision to share its wonders with the world, 
-                African Rhythm Safari has been crafting unforgettable experiences. Our journey is defined not by years,
+                Africa Rhythm Safari has been crafting unforgettable experiences. Our journey is defined not by years,
                  but by the passion that drives us to showcase the beauty and diversity of our beloved continent.</p> 
-            <p>African Rhythm Safari operates in some of Africa's most iconic destinations. 
+            <p>Africa Rhythm Safari operates in some of Africa's most iconic destinations. 
                 Our roots are deeply intertwined with the landscapes we traverse, 
                 and our commitment to responsible tourism extends to preserving and protecting the environments we explore.</p>
             </div>
@@ -118,7 +118,7 @@
 
         <div class="content">
             <h3 class="title">Our Values</h3>
-            <p>At African Rhythms Safari, we embody the essence of Africa through our 
+            <p>At Africa Rhythms Safari, we embody the essence of Africa through our 
                 core values of authenticity, sustainability, diversity and inclusion, excellence, empowerment, and adventure. 
                 We specialize in crafting immersive experiences that celebrate the continent's rich cultural heritage and awe-inspiring landscapes.
                  Committed to sustainable practices and community empowerment, we offer unforgettable journeys that go beyond tourism, fostering meaningful 
@@ -153,7 +153,7 @@
         <div class="footer__left">
             <img class="footer__logo" src="./images/logo.png" alt="Footer Logo">
             <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://web.facebook.com/africarhythmsafaris" class="social-icon"><i class="fab fa-facebook"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                 <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/254731370112?text=Hello,%20I%20have%20an%20inquiry%20about%20your%20service." class="social-icon"><i class="fab fa-whatsapp"></i></a>
@@ -164,12 +164,15 @@
 
         <!-- Right side with subscription form and copyright -->
         <div class="footer__right">
-            <form class="subscribe-form">
-                <input type="email" placeholder="Enter your email">
+            <form name="submit-to-google-sheet" class="subscribe-form">
+                <input type="email" name="Email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
             </form>
+            <!--Subscription-->
+            <span id="msg"></span>
+            
             <p class="copyright">
-                &copy; copyright 2024 African Rhythms Safaris. All rights reserved. 
+                &copy; copyright 2024 Africa Rhythms Safaris. All rights reserved. 
                 | <a href="https://github.com/Tec-Urchin" target="_blank"><span class="Urchin">Tec Urchin</span></a>
             </p>
                 
@@ -180,7 +183,24 @@
 
 <!--End of footer-->
 
-
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzqt2yR6IUogAke_AqcHpjmV3Z1ba1sInm4_qirT3L29pE7asQfc_e5m_YbomrFAz0MpQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Thank You For Subscribing!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
     
     
     
