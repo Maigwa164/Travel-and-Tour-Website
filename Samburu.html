@@ -13,35 +13,76 @@
     
 </head>
 <body>
-    <header>
-        <a href="index.html"><img class="logo" src="./images/logo.png" alt="logo"></a>
-        <div class="menu">
-            <div class="btn">
-                <i class="fa fa-times close-btn"></i>
+    <header class="header">
+        <nav class="nav container">
+           <div class="nav__data">
+              <a href="#" class="nav__logo">
+                 <img src="./images/logo.png" alt="logo">
+              </a>
+              <div class="nav__toggle" id="nav-toggle">
+                 <i class="ri-menu-line nav__burger"></i>
+                 <i class="ri-close-line nav__close"></i>
+              </div>
+           </div>
+    
+           <!-- NAV MENU -->
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li><a href="index.html" class="nav__link">Home</a></li>
 
-            </div>
-            <a href="index.html">HOME</a</li>
-            <a href="about us.html">ABOUT US</a>
-            <a href="gallery.html">GALLERY</a>
-            <a href="contact us.html">CONTACT US</a>
-            
-            <div class="dropdown">
-                <a href="destination.html" class="dropbtn">DESTINATIONS<i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-content"width="1000px">
-                    <a href="Naivasha.html">NAIVASHA</a>
-                    <a href="Samburu.html">SAMBURU</a>
-                    <a href="Mombasa.html">MOMBASA</a>
-                    <a href="Maasai Mara.html">MAASAI MARA</a>
-                    <a href="Tsavo.html">TSAVO</a>
+                 <li><a href="about us.html" class="nav__link">About Us</a></li>
+                 
+                 <li><a href="gallery.html" class="nav__link">Gallery</a></li>
 
-                </div>
-            </div>
-            <a href="booking.html">BOOKING</a>
-        </div>
-        <div class="btn">
-            <i class="fas fa-bars menu-btn"></i>
-        </div>
-    </header>
+                 <li><a href="contact us.html" class="nav__link">Contact Us</a></li>
+
+
+                 <!--=============== DROPDOWN 1 ===============-->
+                 <li class="dropdown__item">
+                    <div class="nav__link">
+                       <a href="destination.html">Destinations</a> <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu">
+                       <li>
+                          <a href="Naivasha.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Naivasha
+                          </a>                          
+                       </li>
+
+                       <li>
+                          <a href="Maasai Mara.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Maasai Mara
+                          </a>
+                       </li>
+
+                       <li>
+                          <a href="Mombasa.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Mombasa
+                          </a>
+                       </li>
+
+                       <li>
+                          <a href="Samburu.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Samburu
+                          </a>
+                       </li>
+
+
+
+                       <li>
+                          <a href="Tsavo.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Tsavo
+                          </a>
+                       </li>
+                    </ul>
+                 </li>
+
+                 <li><a href="booking.html" class="nav__link">Booking</a></li>
+              </ul>
+           </div>
+        </nav>
+     </header>
    <!--SLIDING IMAGE-->
     <img class="mySlides" src="./images/naivasha1.jpg">
     <img class="mySlides" src="./images/naivasha2.jpg">
@@ -228,40 +269,48 @@
 
 
     
-<!--Footer-->
-<footer class="footer">
-    <div class="footer__container">
-        <!-- Left side with logo and social icons -->
-        <div class="footer__left">
+
+<!-- footer section starts -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
             <img class="footer__logo" src="./images/logo.png" alt="Footer Logo">
-            <div class="social-icons">
-                <a href="https://web.facebook.com/africarhythmsafaris" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/254731370112?text=Hello,%20I%20have%20an%20inquiry%20about%20your%20service." class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                <!-- Add more social icons as needed -->
+            <p style="font-weight: bold;">Africa Rhythms Safaris.<br>Come Unravel Nature's Best In Nature</p>
+            <div class="share">
+                <a href="https://wa.me/254731370112?text=Hello,%20I%20have%20an%20inquiry%20about%20your%20service."target="_blank" class="fab fa-whatsapp"></a>
+                <a href="https://web.facebook.com/africarhythmsafaris" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-tiktok"></a>
+                <a href="#" class="fab fa-twitter"></a>
             </div>
         </div>
 
-        <!-- Right side with subscription form and copyright -->
-         <!-- Right side with subscription form and copyright -->
-         <div class="footer__right">
+        <div class="box">
+            <h3>Contact info</h3>
+            <p><i class="fas fa-phone"></i> +254 731370112</p>
+            <p><i class="fas fa-envelope"></i> info@africarhythmsafaris.com</p>
+            <p><i class="fas fa-map"></i> 54160 - 00200 Nairobi Kenya</p>
+        </div>
+
+        <div class="box">
+            <h3>Newsletter</h3>
+            <p>subscribe for latest updates</p>
             <form name="submit-to-google-sheet" class="subscribe-form">
-                <input type="email" name="Email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
+                <input type="email" name="Email"  placeholder="enter your email"required class="email">
+                <input type="submit" value="subscribe" class="button">
             </form>
             <!--Subscription-->
             <span id="msg"></span>
-            
-            <p class="copyright">
-                &copy; copyright 2024 Africa Rhythms Safaris. All rights reserved. 
-                | <a href="https://github.com/Tec-Urchin" target="_blank"><span class="Urchin">Tec Urchin</span></a>
-            </p>
-                
-            </p>
         </div>
+
     </div>
-</footer>
+
+    <div class="credit">Crested by <span><a href="https://www.linkedin.com/in/david-maigwa" target="_blank">MAIGWA</a></span> | all rights are reserved! @2024</div>
+
+</section>
 
 <!--End of footer-->
 

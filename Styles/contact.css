@@ -52,36 +52,7 @@
           color: #4F6F52;
           text-transform: uppercase;
         }
-        .button{
-            font-size: 1.7rem;
-            display: inline-block;
-            background: #ff6e01;
-            color: var(--white);
-            box-shadow: var(--box-shadow);
-            border-radius: 5rem;
-            padding: 0.9rem 3rem;
-            margin-top: 1rem;
-            z-index: 0;
-            position: relative;
-            overflow: hidden;
-          }
-          
-          .button::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            height: 100%;
-            width: 0%;
-            background: #ff9748;
-            z-index: -1;
-            transition: .3s linear;
-            left: 0;
-          }
-          
-          .button:hover::before{
-            width: 100%;
-          }
-
+        
 /* banner */
 
 .banner .box-container{
@@ -160,5 +131,9 @@
     resize: none;
     width: 100%;
   }
+
+  /*Footer*/
+ 
+/* end */
   
   /* end */

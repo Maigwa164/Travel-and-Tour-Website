@@ -1,36 +1,43 @@
-// For sticky navbar and highlighting current page
+// For sticky navbar and changing background color on scroll
 window.addEventListener("DOMContentLoaded", function() {
     var header = document.querySelector("header");
-    var currentPage = window.location.href;
 
-    // Function to add 'sticky' class to the header
+    // Function to add 'sticky' class to the header and change background color on scroll
     function toggleSticky() {
         header.classList.toggle('sticky', window.scrollY > 0);
     }
 
-    // Function to highlight the current page in the navigation
-    function highlightCurrentPage() {
-        var navLinks = document.querySelectorAll('.menu a');
-
-        navLinks.forEach(function(navLink) {
-            navLink.classList.toggle('current-page', navLink.href === currentPage);
-        });
-    }
-
     // Initial call to set initial state
     toggleSticky();
-    highlightCurrentPage();
 
     // Event listener for scroll
     window.addEventListener("scroll", function() {
         toggleSticky();
-        highlightCurrentPage();
     });
 });
 
+// For highlighting the current page
+// Add this to your existing JavaScript file or in a script tag
+window.addEventListener("DOMContentLoaded", function() {
+    var currentPage = window.location.href.split('/').pop();
+    var navLinks = document.querySelectorAll('.nav__link');
+
+    // Function to highlight the current page in the navigation
+    function highlightCurrentPage() {
+        navLinks.forEach(function(navLink) {
+            var linkPath = navLink.href.split('/').pop();
+            navLink.classList.toggle('current-page', linkPath === currentPage);
+        });
+    }
+
+    // Initial call to set initial state
+    highlightCurrentPage();
+});
+
+
 //for logo
 window.addEventListener("scroll", function () {
-    var header = document.querySelector(".logo");
+    var header = document.querySelector(".nav__logo");
     header.classList.toggle('sticky', window.scrollY > 0);
 
     // Adjust logo size based on scroll position
@@ -44,29 +51,24 @@ window.addEventListener("scroll", function () {
     logo.style.maxHeight = newLogoHeight + "px";
 });
 
+/*
 //for reactive navbar
-var menu = document.querySelector('.menu');
-var menuBtn = document.querySelector('.menu-btn');
-var closeBtn = document.querySelector('.close-btn');
-
-menuBtn.addEventListener("click",()=>{
-    menu.classList.add('active');
-}); 
-closeBtn.addEventListener("click",()=>{
-    menu.classList.remove('active');
-});
+/*=============== SHOW MENU ===============*/
+const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+          nav = document.getElementById(navId)
  
-//drop down
-function toggleDropdown() {
-    var dropdownContent = document.querySelector('.dropdown-content');
-    dropdownContent.classList.toggle('show');
-}
+    toggle.addEventListener('click', () =>{
+        // Add show-menu class to nav menu
+        nav.classList.toggle('show-menu')
+ 
+        // Add show-icon to show and hide the menu icon
+        toggle.classList.toggle('show-icon')
+    })
+ }
 
-function closeDropdown() {
-    var dropdownContent = document.querySelector('.dropdown-content');
-    dropdownContent.classList.remove('show');
-}
 
+ showMenu('nav-toggle','nav-menu')
 
 //SLIDING IMAGE
 var slideIndex = 0;
