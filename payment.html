@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africa Rhythms Safaris</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="/Styles/contact.css">
+    <link rel="javascript" href="index.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.ico">
+    
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+           <div class="nav__data">
+              <a href="#" class="nav__logo">
+                 <img src="./images/logo.png" alt="logo">
+              </a>
+              <div class="nav__toggle" id="nav-toggle">
+                 <i class="ri-menu-line nav__burger"></i>
+                 <i class="ri-close-line nav__close"></i>
+              </div>
+           </div>
+    
+           <!-- NAV MENU -->
+           <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list">
+                 <li><a href="index.html" class="nav__link">Home</a></li>
+
+                 <li><a href="about us.html" class="nav__link">About Us</a></li>
+                 
+                 <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+
+                 <li><a href="contact us.html" class="nav__link">Contact Us</a></li>
+
+
+                 <!--=============== DROPDOWN 1 ===============-->
+                 <li class="dropdown__item">
+                    <div class="nav__link">
+                       <a href="destination.html">Destinations</a> <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu">
+                       <li>
+                          <a href="Naivasha.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Naivasha
+                          </a>                          
+                       </li>
+
+                       <li>
+                          <a href="Maasai Mara.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Maasai Mara
+                          </a>
+                       </li>
+
+                       <li>
+                          <a href="Mombasa.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Mombasa
+                          </a>
+                       </li>
+
+                       <li>
+                          <a href="Samburu.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Samburu
+                          </a>
+                       </li>
+
+
+
+                       <li>
+                          <a href="Tsavo.html" class="dropdown__link">
+                             <i class="ri-gps-line"></i> Tsavo
+                          </a>
+                       </li>
+                    </ul>
+                 </li>
+
+                 <li><a href="booking.html" class="nav__link">Booking</a></li>
+              </ul>
+           </div>
+        </nav>
+     </header>
+ 
+
+
+    <!-- Banner Two -->
+  <section class="banner__container2" style="padding-top: 50%;">
+    <div class="section__container2">
+      <div class="banner__content2">
+       <hr>
+    
+        
+      </div>
+    </div>
+  </section>
+
+  <!--Banner content-->
+<section class="banner__container" style="background-image:url(/images/banner.png);">
+    <div class="section__container">
+      <div class="banner__content">
+        <h2 style="color: brown;">Payment gateways are under integration and will be available soon. Thankyou!</h2>
+        <button> <a href="contact us.html">Enquire on payment</a> </button>
+      </div>
+    </div>
+  </section>
+
+<!-- footer section starts -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <img class="footer__logo" src="./images/logo.png" alt="Footer Logo">
+            <p style="font-weight: bold;">Africa Rhythms Safaris.<br>Come Unravel Nature's Best In Nature</p>
+            <div class="share">
+                <a href="https://wa.me/254731370112?text=Hello,%20I%20have%20an%20inquiry%20about%20your%20service."target="_blank" class="fab fa-whatsapp"></a>
+                <a href="https://web.facebook.com/africarhythmsafaris" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-tiktok"></a>
+                <a href="#" class="fab fa-twitter"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Contact info</h3>
+            <p><i class="fas fa-phone"></i> +254 731370112</p>
+            <p><i class="fas fa-envelope"></i> info@africarhythmsafaris.com</p>
+            <p><i class="fas fa-map"></i> 54160 - 00200 Nairobi Kenya</p>
+        </div>
+
+        <div class="box">
+            <h3>Newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <form name="submit-to-google-sheet" class="subscribe-form">
+                <input type="email" name="Email"  placeholder="enter your email"required class="email">
+                <input type="submit" value="subscribe" class="button">
+            </form>
+            <!--Subscription-->
+            <span id="msg"></span>
+        </div>
+
+    </div>
+
+    <div class="credit">Crested by <span><a href="https://www.linkedin.com/in/david-maigwa" target="_blank">MAIGWA</a></span> | all rights are reserved! @2024</div>
+
+</section>
+
+<!--End of footer-->
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzqt2yR6IUogAke_AqcHpjmV3Z1ba1sInm4_qirT3L29pE7asQfc_e5m_YbomrFAz0MpQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Thank You For Subscribing!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    
+    <script src="index.js"></script>
+</body>
+</html>
