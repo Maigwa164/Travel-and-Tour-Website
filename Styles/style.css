@@ -172,7 +172,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #282d31;
   
 }
 
@@ -304,7 +304,7 @@ a {
 }
 
 .nav__link:hover {
-  background-color: rgb(0, 255, 136);
+  background-color: #FF9F66;/*This is for small nav on mobile*/
 }
 
 /* Show menu */
@@ -477,7 +477,11 @@ a {
     transition: top .3s;
   }
 }
-
+.nav__link.current-page {
+  color:#FF0000; /* or any color you prefer */
+  font-weight: bold; /* to make it stand out */
+  border-bottom: 6px solid brown; /* add an underline */
+}
 
 /*end*/
 

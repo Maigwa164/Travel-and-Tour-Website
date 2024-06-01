@@ -17,16 +17,19 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 // For highlighting the current page
-// Add this to your existing JavaScript file or in a script tag
 window.addEventListener("DOMContentLoaded", function() {
-    var currentPage = window.location.href.split('/').pop();
+    var currentPage = window.location.pathname.split('/').pop();
     var navLinks = document.querySelectorAll('.nav__link');
 
     // Function to highlight the current page in the navigation
     function highlightCurrentPage() {
         navLinks.forEach(function(navLink) {
-            var linkPath = navLink.href.split('/').pop();
-            navLink.classList.toggle('current-page', linkPath === currentPage);
+            var linkPath = navLink.pathname.split('/').pop();
+            if (linkPath === currentPage) {
+                navLink.classList.add('current-page');
+            } else {
+                navLink.classList.remove('current-page');
+            }
         });
     }
 
